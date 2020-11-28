@@ -1,0 +1,34 @@
+{
+  "name": "foryou",
+  "version": "0.0.1",
+  "description": "For you, Xiaozhe Li",
+  "private": true,
+  "main": "src/main.ts",
+  "scripts": {
+    "install:front": "cd front && yarn install && cd -",
+    "start": "node dist/main.js",
+    "dev": "ts-node src/main.ts",
+    "build:back": "tsc",
+    "build:front": "cd front && yarn build && cp dist/ ../static/ -r && cd -",
+    "build": "yarn run clean && yarn run build:back && yarn run build:front",
+    "clean": "rm -rf dist static",
+    "lint": "eslint . --ext .js,.ts"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.8",
+    "@types/express": "^4.17.9",
+    "@types/node": "^14.14.9",
+    "@typescript-eslint/eslint-plugin": "^4.8.1",
+    "@typescript-eslint/parser": "^4.8.1",
+    "eslint": "^7.14.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.2.0",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.1.2"
+  }
+}

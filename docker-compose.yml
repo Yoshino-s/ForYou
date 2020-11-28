@@ -1,0 +1,8 @@
+version: "3"
+services:
+  foryou:
+    build: .
+    container_name: love
+    restart: always
+    ports:
+      - 20089:8888
