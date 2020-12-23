@@ -5,13 +5,9 @@
   "private": true,
   "main": "src/main.ts",
   "scripts": {
-    "install:front": "cd front && yarn install && cd -",
     "start": "node dist/main.js",
     "dev": "ts-node src/main.ts",
-    "build:back": "tsc",
-    "build:front": "cd front && yarn build && cp dist/ ../static/ -r && cd -",
-    "build": "yarn run clean && yarn run build:back && yarn run build:front",
-    "clean": "rm -rf dist static",
+    "build": "rm -rf dist && tsc && cp src/*.py dist/",
     "lint": "eslint . --ext .js,.ts"
   },
   "dependencies": {
