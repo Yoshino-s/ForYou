@@ -1,6 +1,6 @@
 # For you
 
-> For my dear, Xiaozhe Li
+> For someone
 
 A small application for you.
 
